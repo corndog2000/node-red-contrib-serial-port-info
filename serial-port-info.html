@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('serial-port-info',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.svg",
+        label: function() {
+            return this.name||"serial-port-info";
+        },
+        paletteLabel: "serial port info"
+    });
+</script>
+
+<script type="text/html" data-template-name="serial-port-info">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="serial-port-info">
+    <p>A node that lists serial port information.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">any</span></dt>
+        <dd>Any input will trigger the node to list serial ports.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">array</span></dt>
+        <dd>An array of objects containing information about available serial ports.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>This node uses the serialport library to list all available serial ports on the system. When triggered, it outputs an array of objects, each representing a serial port with properties such as path, manufacturer, serialNumber, etc.</p>
+</script>

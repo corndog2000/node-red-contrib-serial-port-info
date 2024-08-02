@@ -1,0 +1,14 @@
+{
+  "name": "node-red-contrib-serial-port-info",
+  "version": "1.0.0",
+  "description": "Node-RED node to list serial port information",
+  "main": "serial-port-info.js",
+  "node-red": {
+    "nodes": {
+      "serial-port-info": "serial-port-info.js"
+    }
+  },
+  "dependencies": {
+    "serialport": "^9.0.0"
+  }
+}
