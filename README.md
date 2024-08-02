@@ -1,1 +1,1 @@
-# serial-port-info-node-red-module
+# node-red-contrib-serial-port-info
